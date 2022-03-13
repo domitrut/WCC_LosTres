@@ -1,0 +1,87 @@
+<HTML>
+
+    <HEAD>
+        <TITLE>My Favourite Books</TITLE>
+        <META charset="utf8" />
+        <LINK rel="stylesheet" href="books.css" />
+        <SCRIPT src="books.js"></SCRIPT>
+        <STYLE>
+            .hidden {
+                display:none
+            }
+        </STYLE>
+    </HEAD>
+    
+    <BODY>
+        <HEADER>
+            <DIV id="topbar"></DIV>
+            <DIV id="titlebox">
+                <H1 id="title">Add New Books</H1>
+            </DIV>
+            <NAV>
+                <DIV id="menuicon">&#9776;</DIV>
+                <UL id="menuitemlist">
+                    <div class="dropdown">
+    
+                        <button onclick="dropdown1()" class="dropdownbutton">Add new book</button>
+                        <div id="dropdown1" class="dropdown-content">
+                            <a href="index.html">Menu</a>
+                            <a href="statistics.html">Statistics</a>
+                        </div>
+                </UL>
+                <DIV id="searchicon">&#x1F50D;</DIV>
+                <DIV id="searchbox">
+                    <input type="text" id="myInput" onkeyup="booksearch()" placeholder="Search title...">
+                </DIV>
+            </NAV>
+        </HEADER>
+        <ASIDE id="sidebar">
+            <h3>Maria Diniz</h3>
+            <p><a href="">Profile</a></p>
+            <p><a href="">Preferences</a></p>
+            <h3>Categorias</h3>
+            <p><a href="">Drama (1)</a></p>
+            <p><a href="">Historical Romance (2)</a></p>
+            <p><a href="">Science Fiction (5)</a></p>
+            <h3>Collections</h3>
+            <p><a href="">Holidays (4)</a></p>
+            <p><a href="">All timers (10)</a></p>
+        </ASIDE>
+        <SECTION>
+            <form>
+                <p>Complete this form to add a new book:</p>
+
+                <label for="bookname">Book Name:</label><br>
+                <input type="text" id="bookname" name="bookname"><br>
+
+                <label for="author">Author:</label><br>
+                <input type="text" id="author" name="author">
+
+                <label for="rating">Rating (1-5):</label><br>
+                <input type="text" id="rating" name="rating">
+
+                <label for="numberrating">Number of ratings:</label><br>
+                <input type="text" id="numberrating" name="numberrating">
+
+                <label for="imageurl">Image URL:</label><br>
+                <input type="text" id="imageurl" name="imageurl"><br>
+
+                <button onclick="submitbutton()" class="submitbutton">Submit</button>
+              </form>
+        </SECTION>
+        <FOOTER>
+            <div>
+                <p>E-mail: <a href="">joe@someemail.somewhere</a></p>
+                <p>Phone: 555 888 333</p>
+                <p>&nbsp;</p>
+            </div>
+            <div>
+                <p><a href="">Section 1</a></p>
+                <p><a href="">Section 2</a></p>
+                <p><a href="">Section 3</a></p>
+            </div>
+        </FOOTER>
+    
+    </BODY>
+    
+    </HTML>
