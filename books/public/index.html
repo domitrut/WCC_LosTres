@@ -21,17 +21,17 @@
         <NAV>
             <DIV id="menuicon">&#9776;</DIV>
             <UL id="menuitemlist">
-                <LI class="menuitem"> <a href="">Menu</a> 
-                    <ul class="submenu">
-                        <li class="submenuitems">Add new book1</li>
-                        <li class="submenuitems">Statistics</li>
-                    </ul>
-                    </LI>
+                <div class="dropdown">
+
+                    <button onclick="dropdown1()" class="dropdownbutton">Menu</button>
+                    <div id="dropdown1" class="dropdown-content">
+                        <a href="">Add new book</a>
+                        <a href="">Statistics</a>
+                    </div>
             </UL>
             <DIV id="searchicon">&#x1F50D;</DIV>
-            <DIV id="searchboxarea">
-                <input id="searchbox">
-                <button id="searchbutton">Search</button>
+            <DIV id="searchbox">
+                <input type="text" id="myInput" onkeyup="booksearch()" placeholder="Search title...">
             </DIV>
         </NAV>
     </HEADER>

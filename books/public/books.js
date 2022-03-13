@@ -59,3 +59,41 @@ window.onload = () => {
     installOtherEventHandlers()
 }
 
+// DROPDOWN
+function dropdown1() {
+    document.getElementById("dropdown1").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdownbutton')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+}
+
+//SEARCH FUNCTION
+function booksearch() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('listofbooks');
+    li = ul.getElementsByTagName('li');
+    
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("h2")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    } 
+  }
