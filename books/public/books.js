@@ -23,7 +23,7 @@ function loadAndFillBooks(search) {
     if( search != undefined )
         query = `?search=${search}`
 
-    fetch('/api/books'+query)
+    fetch('api/books'+query)
     .then(data => data.json())
     .then(books => { fillBooks(books) })
 }
